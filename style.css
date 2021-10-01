@@ -1,13 +1,3 @@
-:root {
-    --content-spacing: 1em;
-    --content-width: 80%;
-    
-    --background-color: hsl(225, 100%, 94%);
-    --background-color-light-blue: hsl(225, 100%, 98%);
-    --button-color-blue: hsl(245, 75%, 52%);
-    --text-color-gray: hsl(224, 23%, 55%);
-    --text-color-black: hsl(223, 47%, 23%);
-}
 
 /* base*/
 *{
@@ -22,10 +12,6 @@
 body{
     font-family: 'Red Hat Display', sans-serif; 
     background-color: #e0eaff;
-}
-
-
-.main-container {
     background-image: url("./images/pattern-background-mobile.svg");
     background-repeat: no-repeat;
     background-position: 0 -260px;
@@ -34,18 +20,24 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: var (--background-color);
+    background-color: hsl(225, 100%, 94%);
     padding: 5em 1em;
    
 }
 
 
+.main-container {
+  background-color: white;
+  max-width: 450px;
+  margin-bottom: 100px;
+}
+
+
 
 /*wrapper*/
-.wrapper{
-    background-color: white;
-    max-width: 450px;
-}
+/*.wrapper{
+   
+}*/
 
 
 /*main*/
@@ -75,10 +67,10 @@ main p{
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
-   background-color:var(--background-color-light-blue);
+   background-color:hsl(225, 100%, 98%);
    padding:20px;
    margin:10px 20px;
-   border:solid 1px var(--background-color-light-blue);
+   border:solid 1px hsl(225, 100%, 98%);
    border-radius: 10px;
 }
 
@@ -112,23 +104,33 @@ main p{
   
 }
 
+ .proceed{
+    background-color:hsl(245, 82%, 64%);
+    box-shadow: -5px 30px 30px hsl(224, 23%, 55%);
+    border-radius: 10px;
+    
+}
+
+
 .proceed,
 .cancel{
     width:95%;
     height: 40px;
     margin:10px auto;
-    background-color: transparent;
     border:none;
     font-weight: 900;
     font-weight:bold;
     color:hsl(223, 47%, 23%);
 }
 
+.cancel{
+    background-color: transparent;
+  }
 .proceed:active,
 .cancel:active {
     background-color:hsl(245, 82%, 64%);
     color:white;
-    border:1px solid hsl(245, 75%, 52%);
+   
     border-radius: 10px;
     box-shadow: -5px 30px 30px hsl(224, 23%, 55%);
     
@@ -149,14 +151,14 @@ button:hover{
 
 @media screen and  (max-width:375px) {
 
-    .main-container{
+    body{
         background-image: url("./images/pattern-background-mobile.svg");
       
     
     }
     
    
-    .wrapper{
+    .main-container{
         width:325px;
         background-size: 100% 200px;
         margin-left:25px;
